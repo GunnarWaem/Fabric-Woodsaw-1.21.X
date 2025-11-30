@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "woodsawmod",
+	"version": "${version}",
+	"name": "Woodsaw Mod",
+	"description": "Adds a woodsaw to compliment the stonecutter",
+	"authors": [
+		"Gsaurus"
+	],
+	"contact": {
+		"homepage": "https://gsaurus.net/",
+		"sources": "https://github.com/GunnarWaem/Fabric-Woodsaw-1.21.X"
+	},
+	"license": "MIT",
+	"icon": "assets/woodsawmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.gsaurus.woodsawmod.WoodsawMod"
+		],
+		"fabric-datagen": [
+			"net.gsaurus.woodsawmod.WoodsawModDataGenerator"
+		],
+		"client": [
+			"net.gsaurus.woodsawmod.WoodsawModClient"
+		]
+	},
+	"mixins": [
+		"woodsawmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
