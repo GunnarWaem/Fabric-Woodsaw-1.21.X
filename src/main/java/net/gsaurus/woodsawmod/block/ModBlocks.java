@@ -17,7 +17,8 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class ModBlocks {
-    public static final Block WOODSAW = registerBlock("woodsaw", WoodsawBlock::new);
+    public static final Block WOODSAW = registerBlock("woodsaw",
+            properties -> new WoodsawBlock(properties.nonOpaque()));
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(WoodsawMod.MOD_ID, name))));
